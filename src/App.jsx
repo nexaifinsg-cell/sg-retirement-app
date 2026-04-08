@@ -11,6 +11,10 @@ import { formatAge, isBornBefore1975, getYearAt55 } from './utils/formatters';
 import ReportAt55 from './components/ReportAt55';
 import ReportAbove55 from './components/ReportAbove55';
 import PrintableReport from './components/PrintableReport';
+import TopUpScenarios from './components/TopUpScenarios';
+import WhatIfAnalysis from './components/WhatIfAnalysis';
+import ClientManager from './components/ClientManager';
+import CouplePlanning from './components/CouplePlanning';
 
 // ---------------------------------------------------------------------------
 // Tab definitions
@@ -20,6 +24,9 @@ const TABS = [
   { key: 'portfolio', label: 'Portfolio' },
   { key: 'cpf',       label: 'CPF Projection' },
   { key: 'cashflow',  label: 'Cashflow Analysis' },
+  { key: 'topup',     label: 'Top-Up Scenarios' },
+  { key: 'whatif',    label: 'What-If Analysis' },
+  { key: 'couple',    label: 'Couple Planning' },
   { key: 'reports',   label: 'Reports' },
 ];
 
@@ -142,6 +149,7 @@ export default function App() {
       case 'client':
         return (
           <>
+            <ClientManager currentInputs={inputs} setInputs={setInputs} onSelectClient={(data) => setInputs(prev => ({ ...DEFAULT_INPUTS, ...data }))} />
             <SamplePresets setInputs={setInputs} />
             <InputForm inputs={inputs} setInputs={setInputs} />
           </>
@@ -211,6 +219,39 @@ export default function App() {
             </div>
           </>
         );
+
+      case 'topup':
+        if (!canProject || !projectionData) {
+          return (
+            <div className="text-center py-16 text-gray-500">
+              <p className="text-lg font-medium">No projection available</p>
+              <p className="mt-1 text-sm">Complete Client Details first to use Top-Up Scenarios.</p>
+            </div>
+          );
+        }
+        return <TopUpScenarios inputs={inputs} projectionData={projectionData} projectionDerived={projectionDerived} />;
+
+      case 'whatif':
+        if (!canProject || !projectionData) {
+          return (
+            <div className="text-center py-16 text-gray-500">
+              <p className="text-lg font-medium">No projection available</p>
+              <p className="mt-1 text-sm">Complete Client Details first to use What-If Analysis.</p>
+            </div>
+          );
+        }
+        return <WhatIfAnalysis inputs={inputs} projectionData={projectionData} cashflowData={cashflowData} projectionDerived={projectionDerived} />;
+
+      case 'couple':
+        if (!canProject || !projectionData) {
+          return (
+            <div className="text-center py-16 text-gray-500">
+              <p className="text-lg font-medium">No projection available</p>
+              <p className="mt-1 text-sm">Complete Client Details first to use Couple Planning.</p>
+            </div>
+          );
+        }
+        return <CouplePlanning inputs={inputs} projectionData={projectionData} cashflowData={cashflowData} projectionDerived={projectionDerived} />;
 
       default:
         return null;
