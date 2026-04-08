@@ -67,19 +67,19 @@ export default function ReportAt55({ projectionData, inputs, cashflowData }) {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
           </svg>
-          Print Report
+          Generate Report
         </button>
       </div>
 
       {/* Report Container */}
       <div className="bg-white border border-gray-200 rounded-lg shadow-sm print:shadow-none print:border-none">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-700 to-blue-900 text-white px-8 py-6 rounded-t-lg print:rounded-none">
+        <div className="bg-gradient-to-r from-[#1a1a2e] to-[#2d2d44] text-white px-8 py-6 rounded-t-lg print:rounded-none">
           <h1 className="text-xl font-bold tracking-wide text-center">
-            Projection of CPF Accounts Balances at 55 Report
+            NexAiFin Retirement Projection Report
           </h1>
           <p className="text-blue-200 text-sm text-center mt-2">
-            Specially Prepared for{' '}
+            Exclusively Prepared for{' '}
             <span className="text-white font-semibold">{inputs.name || 'Client'}</span>
           </p>
           <p className="text-blue-300 text-xs text-center mt-1">

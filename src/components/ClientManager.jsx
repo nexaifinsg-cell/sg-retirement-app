@@ -148,11 +148,11 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
       {/* Toggle bar */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between bg-[#1e3a5f] text-white rounded-lg px-4 py-3 shadow-sm hover:bg-[#2c5282] transition-colors"
+        className="w-full flex items-center justify-between bg-[#1a1a2e] text-white rounded-lg px-4 py-3 shadow-sm hover:bg-[#2d2d44] transition-colors"
       >
         <div className="flex items-center gap-2">
           <svg
-            className="h-5 w-5 text-[#c8a951]"
+            className="h-5 w-5 text-[#d4af37]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -165,7 +165,7 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
             />
           </svg>
           <span className="font-semibold text-sm">Saved Clients</span>
-          <span className="bg-[#c8a951] text-[#1e3a5f] text-xs font-bold px-2 py-0.5 rounded-full">
+          <span className="bg-[#d4af37] text-[#1a1a2e] text-xs font-bold px-2 py-0.5 rounded-full">
             {clients.length}
           </span>
         </div>
@@ -186,7 +186,7 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
           <div className="flex flex-wrap items-center gap-2 mb-4">
             <button
               onClick={saveClient}
-              className="inline-flex items-center gap-1.5 bg-[#1e3a5f] text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-[#2c5282] transition-colors"
+              className="inline-flex items-center gap-1.5 bg-[#1a1a2e] text-white text-sm font-medium px-4 py-2 rounded-md hover:bg-[#2d2d44] transition-colors"
             >
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path
@@ -213,7 +213,7 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search clients..."
-                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] focus:outline-none"
+                className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-[#1a1a2e] focus:ring-1 focus:ring-[#1a1a2e] focus:outline-none"
               />
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
                 return (
                   <div
                     key={client.id}
-                    className="border border-gray-200 rounded-lg p-3 hover:border-[#1e3a5f]/30 hover:shadow-sm transition-all bg-gray-50"
+                    className="border border-gray-200 rounded-lg p-3 hover:border-[#1a1a2e]/30 hover:shadow-sm transition-all bg-gray-50"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div className="min-w-0">
@@ -268,7 +268,7 @@ export default function ClientManager({ currentInputs, setInputs, onSelectClient
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => loadClient(client.id)}
-                        className="flex-1 text-xs font-medium bg-[#1e3a5f] text-white px-3 py-1.5 rounded-md hover:bg-[#2c5282] transition-colors"
+                        className="flex-1 text-xs font-medium bg-[#1a1a2e] text-white px-3 py-1.5 rounded-md hover:bg-[#2d2d44] transition-colors"
                       >
                         Load
                       </button>

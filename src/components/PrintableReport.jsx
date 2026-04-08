@@ -105,7 +105,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
       background: '#fff',
     },
     header: {
-      background: '#1e3a5f',
+      background: '#1a1a2e',
       color: '#fff',
       padding: '28px 32px 20px',
       textAlign: 'center',
@@ -118,7 +118,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
     },
     headerSub: {
       fontSize: '12px',
-      color: '#c8a951',
+      color: '#d4af37',
       marginTop: '6px',
     },
     headerInfo: {
@@ -132,8 +132,8 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
     sectionTitle: {
       fontSize: '13px',
       fontWeight: 'bold',
-      color: '#1e3a5f',
-      borderBottom: '2px solid #1e3a5f',
+      color: '#1a1a2e',
+      borderBottom: '2px solid #1a1a2e',
       paddingBottom: '4px',
       marginBottom: '12px',
       marginTop: '24px',
@@ -146,7 +146,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
       marginBottom: '16px',
     },
     th: {
-      background: '#1e3a5f',
+      background: '#1a1a2e',
       color: '#fff',
       padding: '8px 12px',
       textAlign: 'left',
@@ -154,7 +154,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
       fontWeight: '600',
     },
     thRight: {
-      background: '#1e3a5f',
+      background: '#1a1a2e',
       color: '#fff',
       padding: '8px 12px',
       textAlign: 'right',
@@ -218,7 +218,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
             alignItems: 'center',
             gap: '8px',
             padding: '10px 20px',
-            background: '#1e3a5f',
+            background: '#1a1a2e',
             color: '#fff',
             fontSize: '14px',
             fontWeight: '600',
@@ -233,7 +233,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
             <polyline points="7 10 12 15 17 10" />
             <line x1="12" y1="15" x2="12" y2="3" />
           </svg>
-          Export PDF
+          Download Advisory Report
         </button>
       </div>
 
@@ -241,12 +241,12 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
       <div ref={reportRef} style={s.page}>
         {/* Header */}
         <div style={s.header}>
-          <h1 style={s.headerTitle}>Singapore CPF Retirement Plan</h1>
+          <h1 style={s.headerTitle}>NexAiFin Wealth Advisory Report</h1>
           <p style={s.headerSub}>
-            Prepared for: <strong style={{ color: '#fff' }}>{inputs.name || 'Client'}</strong>
+            Exclusively Prepared for: <strong style={{ color: '#fff' }}>{inputs.name || 'Client'}</strong>
           </p>
           <p style={s.headerInfo}>
-            Date Prepared: {today} &nbsp;|&nbsp; Adviser: Financial Planning Representative
+            Date Prepared: {today} &nbsp;|&nbsp; Adviser: Your NexAiFin Financial Adviser
           </p>
         </div>
 
@@ -326,7 +326,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
               </tr>
               <tr style={s.rowAlt}>
                 <td style={s.td}>Retirement Sum Set Aside in RA</td>
-                <td style={{ ...s.tdRight, color: '#1e3a5f', fontWeight: 'bold' }}>
+                <td style={{ ...s.tdRight, color: '#1a1a2e', fontWeight: 'bold' }}>
                   {formatCurrency(report.retirementSumSetAside)}
                 </td>
               </tr>
@@ -415,7 +415,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
                         </td>
                         <td style={{
                           ...s.tdRight,
-                          color: (row.endBalance || 0) < 0 ? '#dc2626' : '#1e3a5f',
+                          color: (row.endBalance || 0) < 0 ? '#dc2626' : '#1a1a2e',
                           fontWeight: 'bold',
                         }}>
                           {formatCurrency(row.endBalance)}
@@ -431,9 +431,7 @@ export default function PrintableReport({ inputs, projectionData, cashflowData }
         {/* Footer */}
         <div style={s.footer}>
           <p style={s.footerText}>
-            <strong>Disclaimer:</strong> This report is for illustrative purposes only. Projections are based on current CPF
-            contribution rates, interest rates, and assumptions provided. Actual outcomes may differ.
-            Please consult a qualified financial adviser for personalised advice.
+            <strong>Confidential — NexAiFin Pte Ltd.</strong> This report is for illustrative purposes only. Projections are based on current CPF contribution rates, interest rates, and assumptions provided. Actual outcomes may differ. Please consult your NexAiFin adviser for personalised advice.
           </p>
           <p style={{ ...s.footerText, marginTop: '4px', color: '#d1d5db' }}>
             Report generated on {today}

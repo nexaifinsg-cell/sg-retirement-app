@@ -74,7 +74,7 @@ function FieldInput({ type = 'text', value, onChange, prefix, step, min, placeho
         min={min}
         placeholder={placeholder}
         className={`w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm
-          focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] focus:outline-none
+          focus:border-[#1a1a2e] focus:ring-1 focus:ring-[#1a1a2e] focus:outline-none
           ${prefix ? 'pl-7' : ''}`}
       />
     </div>
@@ -242,7 +242,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
             <select
               value={spouse.gender}
               onChange={handleSpouse('gender')}
-              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-[#1e3a5f] focus:ring-1 focus:ring-[#1e3a5f] focus:outline-none"
+              className="w-full rounded-md border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-[#1a1a2e] focus:ring-1 focus:ring-[#1a1a2e] focus:outline-none"
             >
               <option value="Male">Male</option>
               <option value="Female">Female</option>
@@ -336,7 +336,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                 type="checkbox"
                 checked={spouse.shieldIP}
                 onChange={handleSpouse('shieldIP')}
-                className="rounded border-gray-300 text-[#1e3a5f] focus:ring-[#1e3a5f]"
+                className="rounded border-gray-300 text-[#1a1a2e] focus:ring-[#1a1a2e]"
               />
               MediShield Life / Shield IP
             </label>
@@ -375,7 +375,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                   <th className="text-right py-2 px-4 font-semibold text-purple-700">
                     {spouseName}
                   </th>
-                  <th className="text-right py-2 pl-4 font-semibold text-[#1e3a5f]">Combined</th>
+                  <th className="text-right py-2 pl-4 font-semibold text-[#1a1a2e]">Combined</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -387,7 +387,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                   <td className="py-2 px-4 text-right font-medium text-purple-600">
                     {spouseAt55 ? formatCurrency(spouseAt55.totalBalance) : '-'}
                   </td>
-                  <td className="py-2 pl-4 text-right font-bold text-[#1e3a5f]">
+                  <td className="py-2 pl-4 text-right font-bold text-[#1a1a2e]">
                     {client1At55 && spouseAt55
                       ? formatCurrency(client1At55.totalBalance + spouseAt55.totalBalance)
                       : '-'}
@@ -401,7 +401,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                   <td className="py-2 px-4 text-right font-medium text-purple-600">
                     {spouseAt55 ? formatCurrency(spouseAt55.raBalance) : '-'}
                   </td>
-                  <td className="py-2 pl-4 text-right font-bold text-[#1e3a5f]">
+                  <td className="py-2 pl-4 text-right font-bold text-[#1a1a2e]">
                     {client1At55 && spouseAt55
                       ? formatCurrency(client1At55.raBalance + spouseAt55.raBalance)
                       : '-'}
@@ -415,7 +415,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                   <td className="py-2 px-4 text-right font-medium text-purple-600">
                     {formatCurrency(spouseDerived.estimatedCPFLife)}
                   </td>
-                  <td className="py-2 pl-4 text-right font-bold text-[#1e3a5f]">
+                  <td className="py-2 pl-4 text-right font-bold text-[#1a1a2e]">
                     {formatCurrency(client1CPFLife + spouseDerived.estimatedCPFLife)}
                   </td>
                 </tr>
@@ -427,7 +427,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
                   <td className="py-2 px-4 text-right font-medium text-purple-600">
                     {formatCurrency(spouseDerived.excessCPF)}
                   </td>
-                  <td className="py-2 pl-4 text-right font-bold text-[#1e3a5f]">
+                  <td className="py-2 pl-4 text-right font-bold text-[#1a1a2e]">
                     {formatCurrency(client1Excess + spouseDerived.excessCPF)}
                   </td>
                 </tr>
@@ -465,7 +465,7 @@ export default function CouplePlanning({ inputs, projectionData, cashflowData, p
             <SummaryCard
               label="Combined Fund at 55"
               value={formatCurrency(client1Excess + spouseDerived.excessCPF)}
-              color="text-[#1e3a5f]"
+              color="text-[#1a1a2e]"
             />
             <SummaryCard
               label="Combined CPF Life/month"

@@ -262,17 +262,17 @@ export default function App() {
   // Main render
   // ------------------------------------------
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
+    <div className="min-h-screen bg-[#fafaf8] flex flex-col">
       {/* ---- Header ---- */}
-      <header className="bg-[#1e3a5f] text-white shadow-lg">
+      <header className="bg-gradient-to-r from-[#1a1a2e] to-[#2d2d44] text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                Singapore CPF Retirement Planner
+                NexAiFin Wealth Planner
               </h1>
-              <p className="mt-1 text-sm text-[#c8a951] font-medium tracking-wide">
-                Comprehensive Retirement Cash Flow Analysis
+              <p className="mt-1 text-sm text-[#d4af37] font-medium tracking-wide">
+                CPF Retirement & Wealth Advisory Platform
               </p>
             </div>
 
@@ -287,7 +287,7 @@ export default function App() {
             {/* Client name badge (when entered) */}
             {inputs.name && (
               <div className="hidden sm:flex items-center gap-2 bg-white/10 rounded-lg px-4 py-2">
-                <svg className="h-5 w-5 text-[#c8a951]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-5 w-5 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 <div className="text-sm">
@@ -301,6 +301,7 @@ export default function App() {
           </div>
         </div>
       </header>
+      <div className="h-0.5 bg-gradient-to-r from-[#d4af37] via-[#d4af37] to-transparent" />
 
       {/* ---- Tab Navigation ---- */}
       <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-30">
@@ -315,8 +316,8 @@ export default function App() {
                   className={`
                     whitespace-nowrap px-5 py-3 text-sm font-medium border-b-2 transition-colors
                     ${isActive
-                      ? 'border-[#c8a951] text-[#1e3a5f]'
-                      : 'border-transparent text-gray-500 hover:text-[#1e3a5f] hover:border-gray-300'
+                      ? 'border-[#d4af37] text-[#1a1a2e]'
+                      : 'border-transparent text-gray-500 hover:text-[#1a1a2e] hover:border-gray-300'
                     }
                   `}
                 >
@@ -330,8 +331,8 @@ export default function App() {
 
       {/* ---- Status bar ---- */}
       {canProject && projectionData && (
-        <div className="bg-[#1e3a5f]/5 border-b border-[#1e3a5f]/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2 text-xs text-[#1e3a5f]">
+        <div className="bg-[#1a1a2e]/5 border-b border-[#1a1a2e]/10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2 text-xs text-[#1a1a2e]">
             <span className="inline-block h-2 w-2 rounded-full bg-green-500" />
             <span className="font-medium">Projection active</span>
             <span className="text-gray-400 mx-1">|</span>
@@ -348,11 +349,11 @@ export default function App() {
       </main>
 
       {/* ---- Footer ---- */}
-      <footer className="bg-[#1e3a5f] text-gray-400 text-xs text-center py-4 mt-auto">
+      <footer className="bg-[#1a1a2e] text-gray-400 text-xs text-center py-4 mt-auto">
         <div className="max-w-7xl mx-auto px-4">
-          <p>&copy; {new Date().getFullYear()} Singapore CPF Retirement Planner. For professional financial adviser use only.</p>
+          <p>&copy; {new Date().getFullYear()} NexAiFin Pte Ltd. For authorised NexAiFin advisers only.</p>
           <p className="mt-1 text-gray-500">
-            Projections are estimates based on current CPF policies and assumptions. Not financial advice.
+            This tool provides illustrative projections only. Consult your NexAiFin adviser for personalised advice.
           </p>
         </div>
       </footer>
@@ -360,7 +361,7 @@ export default function App() {
       {/* Back to top button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 bg-[#1e3a5f] text-white p-3 rounded-full shadow-lg hover:bg-[#2c5282] transition-all no-print z-50"
+        className="fixed bottom-6 right-6 bg-[#1a1a2e] text-white p-3 rounded-full shadow-lg hover:bg-[#2d2d44] transition-all no-print z-50"
         title="Back to top"
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
